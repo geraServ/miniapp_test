@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .error-message {
+            color: red;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Error</h1>
+    
+    <div class="error-message">{{ error }}</div>
+    
+    <button onclick="Telegram.WebApp.close()">Close</button>
+    
+    <script>
+        Telegram.WebApp.expand();
+    </script>
+</body>
+</html>

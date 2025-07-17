@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .profile-info {
+            margin-bottom: 20px;
+        }
+        .profile-info div {
+            margin-bottom: 10px;
+        }
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Profile</h1>
+    
+    <div class="profile-info">
+        <div><span class="label">Username:</span> {{ user.username }}</div>
+        <div><span class="label">Email:</span> {{ user.email }}</div>
+        <div><span class="label">Telegram ID:</span> {{ user.telegram_id }}</div>
+    </div>
+    
+    <script>
+        // Expand the WebApp to full height
+        Telegram.WebApp.expand();
+        
+        // Optionally, you can add a back button
+        Telegram.WebApp.BackButton.show();
+        Telegram.WebApp.BackButton.onClick(function() {
+            Telegram.WebApp.close();
+        });
+    </script>
+</body>
+</html>
